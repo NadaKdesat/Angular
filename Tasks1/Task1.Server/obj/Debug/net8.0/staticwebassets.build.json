@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ao5RNnqpgNO1rOf2BX7Pr5O3NkRancMbajBhVO1OJNk=",
+  "Source": "Task1.Server",
+  "BasePath": "_content/Task1.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
