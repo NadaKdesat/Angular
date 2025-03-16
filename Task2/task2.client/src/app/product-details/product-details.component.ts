@@ -10,21 +10,18 @@ import { ApiService } from '../service/api.service';
 })
 export class ProductDetailsComponent {
   product: any;
-
+  productId: any;
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
-    const productId = this.route.snapshot.paramMap.get('id'); 
-    if (productId) {
-      this.fetchProductById(productId);
-    }
+      this.fetchProductById();
   }
 
-  fetchProductById(id: string) {
-    this.apiService.getProductById(id).subscribe(
+  fetchProductById() {
+    this.productId = this.route.snapshot.paramMap.get('id'); 
+    this.apiService.getProductById(this.productId).subscribe(
       (data) => {
         this.product = data;
-        console.log('Product Details:', this.product);
       },
       (error) => {
         console.error('Error fetching product:', error);

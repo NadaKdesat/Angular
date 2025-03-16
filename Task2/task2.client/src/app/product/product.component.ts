@@ -10,27 +10,38 @@ import { ApiService } from '../service/api.service';
 })
 export class ProductComponent {
   product: any[]=[];
-
+  categoryId: any;
   constructor(private route: ActivatedRoute, private apiService: ApiService) { }
 
   ngOnInit(): void {
-    const productId = this.route.snapshot.paramMap.get('id'); 
-    if (productId) {
-      this.fetchProductById(productId);
-    }
+    //const categoryId = this.route.snapshot.paramMap.get('id');
+    //if (categoryId) {
+    //  this.fetchProductsById(categoryId);
+    //}
+    this.fetchProductsById();
   }
 
-  fetchProductById(categoryId: string) {
-    this.apiService.getProductsByCategory(categoryId).subscribe(
-      (data) => {
-        this.product = data || [];
-        console.log('Products in Category:', this.product);
-      },
-      (error) => {
-        console.error('Error fetching products:', error);
-        this.product = [];
-      }
-    );
+  //fetchProductsById(categoryId: string) {
+  //  this.apiService.getProductsByCategory(categoryId).subscribe(
+  //    (data) => {
+  //      this.product = data || [];
+  //    },
+  //    (error) => {
+  //      this.product = [];
+  //    }
+  //  );
+  //}
+
+
+  fetchProductsById() {
+    this.categoryId = this.route.snapshot.paramMap.get("id");
+
+    this.apiService.getProductsByCategory(this.categoryId).subscribe((data) => {
+
+      this.product = data.filter((x: any) => x.categoryId == this.categoryId)
+
+    })
   }
+
 
 }

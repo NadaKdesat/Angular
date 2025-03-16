@@ -13,14 +13,13 @@ export class CategoriesComponent {
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.fetchAllUsers();
+    this.fetchAllCategories();
   }
 
-  fetchAllUsers() {
-    this.apiService.getAllUsers().subscribe(
+  fetchAllCategories() {
+    this.apiService.getAllCategories().subscribe(
       (data) => {
         this.categories = data;
-        console.log('All Users:', this.categories);
       },
       (error) => {
         console.error('Error fetching users:', error);
