@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 export class ApiService {
   private apiUrl = 'https://67cd64b6dd7651e464ee3d63.mockapi.io/categories';
   private apiUrlProduct = 'https://67cd64b6dd7651e464ee3d63.mockapi.io/products';
+
   constructor(private http: HttpClient) { }
 
   getAllCategories(): Observable<any[]> {
