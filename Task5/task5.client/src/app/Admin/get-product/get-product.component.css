@@ -1,0 +1,9 @@
+td {
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 400px; 
+}
+
+td:nth-child(2) {
+  max-width: 200px;
+}

@@ -1,0 +1,16 @@
+<br />
+<h3>Edit Category</h3>
+<br />
+<form style="text-align:left" #category="ngForm" (ngSubmit)="editCategory(category.value)">
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="margin-bottom:10px;">Category Name</label>
+    <input type="text" name="name" ngModel [(ngModel)]="categoryData.name" class="form-control" id="exampleInputEmail1" style="width:500px !important;">
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="margin-bottom:10px;">Category Image</label>
+    <input type="text" name="img" ngModel [(ngModel)]="categoryData.img" class="form-control" id="exampleInputPassword1" placeholder="Enter Category Image" style="width:500px !important;">
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">edit category</button>
+</form>

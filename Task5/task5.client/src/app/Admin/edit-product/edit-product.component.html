@@ -1,0 +1,25 @@
+<br />
+<h3>Edit Product</h3>
+<br />
+<form style="text-align:left" #product="ngForm" (ngSubmit)="editProduct(product.value)">
+  <div class="form-group">
+    <label for="exampleInputEmail1" style="margin-bottom:10px;">Product Name</label>
+    <input type="text" name="name" ngModel [(ngModel)]="productData.name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Product Name" style="width:500px !important;">
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="margin-bottom:10px;">Product Image</label>
+    <input type="text" name="avatar" ngModel [(ngModel)]="productData.avatar" class="form-control" id="exampleInputPassword1" placeholder="Enter Product Image" style="width:500px !important;">
+  </div>
+  <br />
+  <div class="form-group">
+    <label style="margin-bottom:10px;">Select Category</label>
+    <select name="categoryId" ngModel [(ngModel)]="productData.categoryId" class="form-control" style="width:500px !important;">
+      <option *ngFor="let category of categories" [value]="category.id">
+        {{ category.name }}
+      </option>
+    </select>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">edit product</button>
+</form>

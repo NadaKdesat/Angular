@@ -1,0 +1,13 @@
+<div class="row" *ngIf="product.length > 0; else noProducts">
+  <div class="card" *ngFor="let item of product" style="width: 18rem;">
+    <div class="card-body">
+      <!--<img [src]="item.avatar" alt="Alternate Text" />-->
+      <h5 class="card-title">{{ item.name }}</h5>
+      <a routerLink="/ProductDetails/{{item.id}}" class="card-link">See Details</a>
+    </div>
+  </div>
+</div>
+
+<ng-template #noProducts>
+  <p class="text-center text-danger">No products available for this category.</p>
+</ng-template>

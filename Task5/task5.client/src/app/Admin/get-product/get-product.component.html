@@ -1,0 +1,29 @@
+<br />
+<h3>All Products</h3>
+<br />
+<table class="table" border="1">
+  <thead class="table-dark">
+    <tr>
+      <!--<th>#</th>-->
+      <th>Id</th>
+      <th>Product Name</th>
+      <th>Product Image</th>
+      <th>Category Id</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of Products; let i = index">
+      <!--<td>{{i+1}}</td>-->
+      <td>{{product.id}}</td>
+      <td>{{product.name}}</td>
+      <td>{{product.avatar}}</td>
+      <td>{{product.categoryId}}</td>
+      <td>
+        <a class="btn btn-primary" style="margin-right:10px;" routerLink="/Dashboard/editProduct/{{product.id}}">Edit</a>
+        <button type="button" class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+

@@ -1,0 +1,14 @@
+<!-- The sidebar -->
+<div class="sidebar">
+  <a routerLink="/Dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Dashboard</a>
+  <a routerLink="/Dashboard/getCategory" routerLinkActive="active">Get Categories</a>
+  <a routerLink="/Dashboard/addCategory" routerLinkActive="active">Add Category</a>
+  <a routerLink="/Dashboard/getProduct" routerLinkActive="active">Get Product</a>
+  <a routerLink="/Dashboard/addProduct" routerLinkActive="active">Add Product</a>
+</div>
+
+
+<!-- Page content -->
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

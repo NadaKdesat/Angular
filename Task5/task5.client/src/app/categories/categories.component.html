@@ -1,0 +1,9 @@
+<div class="row" >
+<div class="card"*ngFor="let category of categories" style="width: 18rem;">
+  <div class="card-body">
+    <!--<img [src]="category.img" alt="Alternate Text" />-->
+    <h5 class="card-title">{{category.name}}</h5>
+    <a routerLink="/Product/{{category.id}}" class="card-link">See Products</a>
+  </div>
+</div>
+</div>

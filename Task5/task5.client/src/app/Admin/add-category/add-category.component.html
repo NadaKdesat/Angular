@@ -1,0 +1,16 @@
+<br />
+<h3>Add Category</h3>
+<br />
+<form style="text-align:left" #category="ngForm" (ngSubmit)="addCategory(category.value)">
+  <div class="form-group" >
+    <label for="exampleInputEmail1" style="margin-bottom:10px;">Category Name</label>
+    <input type="text" name="name" ngModel class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category Name" style="width:500px !important;">
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="exampleInputPassword1" style="margin-bottom:10px;">Category Image</label>
+    <input type="text" name="img" ngModel class="form-control" id="exampleInputPassword1" placeholder="Enter Category Image" style="width:500px !important;">
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary">add category</button>
+</form>
