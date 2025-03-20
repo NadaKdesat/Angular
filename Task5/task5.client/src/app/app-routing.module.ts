@@ -10,11 +10,17 @@ import { AddCategoryComponent } from './Admin/add-category/add-category.componen
 import { AddProductComponent } from './Admin/add-product/add-product.component';
 import { EditCategoryComponent } from './Admin/edit-category/edit-category.component';
 import { EditProductComponent } from './Admin/edit-product/edit-product.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: "Product/:id", component: ProductComponent },
   { path: "ProductDetails/:id", component: ProductDetailsComponent },
   { path: "Categories", component: CategoriesComponent },
+  { path: "SignUp", component: SignUpComponent },
+  { path: "Login", component: SignInComponent },
+  { path: "Profile", component: ProfileComponent },
   {
     path: "Dashboard", component: DashboardComponent, children: [
       { path: "getCategory", component: GetCategoryComponent },

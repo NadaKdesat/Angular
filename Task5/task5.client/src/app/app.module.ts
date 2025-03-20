@@ -17,6 +17,10 @@ import { CategoriesComponent } from './categories/categories.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignInComponent } from './sign-in/sign-in.component';
+import { ProfileComponent } from './profile/profile.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     CategoriesComponent,
     FooterComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    SignUpComponent,
+    SignInComponent,
+    ProfileComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,

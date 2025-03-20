@@ -9,8 +9,12 @@
         <a class="nav-link active" aria-current="page" href="#">Home</a>
         <a class="nav-link" routerLink="/Dashboard">Admin</a>
         <a class="nav-link" routerLink="/Categories">Categories</a>
-        <a class="nav-link" href="/SignUp">SignUp</a>
-        <a class="nav-link" href="/Login">Login</a>
+
+        <a class="nav-link" href="/SignUp" *ngIf="!isLoggedIn">SignUp</a>
+        <a class="nav-link" href="/Login" *ngIf="!isLoggedIn">Login</a>
+
+        <a class="nav-link" routerLink="/Profile" *ngIf="isLoggedIn">Profile</a>
+        <a class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
       </div>
     </div>
   </div>

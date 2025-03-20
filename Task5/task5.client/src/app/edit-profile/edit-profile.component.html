@@ -1,0 +1,18 @@
+<div class="popup">
+  <div class="popup-content">
+    <h3>Edit Profile</h3>
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="editedData.name" />
+
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="editedData.Email" />
+
+    <label>Age:</label>
+    <input type="number" [(ngModel)]="editedData.age" />
+
+    <div class="buttons">
+      <button class="btn btn-success" (click)="saveChanges()">Save</button>
+      <button class="btn btn-danger" (click)="closePopup()">Cancel</button>
+    </div>
+  </div>
+</div>

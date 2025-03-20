@@ -484,11 +484,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Orange\\Desktop\\Task5\\Task5.Server\\Task5.Server.csproj",
+      "projectUniqueName": "C:\\Users\\Orange\\Desktop\\Angular\\AngularTasks\\Angular\\Task5\\Task5.Server\\Task5.Server.csproj",
       "projectName": "Task5.Server",
-      "projectPath": "C:\\Users\\Orange\\Desktop\\Task5\\Task5.Server\\Task5.Server.csproj",
+      "projectPath": "C:\\Users\\Orange\\Desktop\\Angular\\AngularTasks\\Angular\\Task5\\Task5.Server\\Task5.Server.csproj",
       "packagesPath": "C:\\Users\\Orange\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Orange\\Desktop\\Task5\\Task5.Server\\obj\\",
+      "outputPath": "C:\\Users\\Orange\\Desktop\\Angular\\AngularTasks\\Angular\\Task5\\Task5.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

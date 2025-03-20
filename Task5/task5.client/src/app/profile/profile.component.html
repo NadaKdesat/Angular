@@ -1,0 +1,23 @@
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div class="card p-4">
+    <div class=" image d-flex flex-column justify-content-center align-items-center">
+      <button class="btn btn-secondary">
+        <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
+      </button>
+      <span class="name mt-3">Name: {{userData.name}}</span>
+      <span class="name">Email: {{userData.Email}}</span>
+      <span class="name">Age: {{userData.age}}</span>
+      <br /><br />
+            <div class=" d-flex mt-2">
+              <button class="btn1 btn-dark" (click)="openEditPopup()">Edit Profile</button>
+            </div>
+
+    </div>
+  </div>
+</div>
+
+
+<app-edit-profile *ngIf="isEditPopupOpen"
+                  [userData]="userData"
+                  (updateUser)="updateUserData($event)">
+</app-edit-profile>

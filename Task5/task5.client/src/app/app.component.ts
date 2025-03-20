@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   showNavbar: boolean = true;
-
+  
   constructor(private router: Router) {
     this.router.events.subscribe(() => {
       this.showNavbar = !(
