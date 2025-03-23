@@ -71,19 +71,17 @@ export class ServiceService {
     return this._http.get<any>(`https://67cea6ee125cd5af757b6514.mockapi.io/Users?Email=${email}&password=${password}`);
   }
 
+  updateUserProfile(any: any): Observable<any> {
+    return this._http.put<any>(`https://67cea6ee125cd5af757b6514.mockapi.io/Users/${any.id}`, any);
+  }
 
   private isLoggedInSubject = new BehaviorSubject<boolean>(!!localStorage.getItem('User'));
   isLoggedIn$ = this.isLoggedInSubject.asObservable();
 
   login(user: any) {
     localStorage.setItem('User', JSON.stringify(user));
-    this.isLoggedInSubject.next(true); 
+    this.isLoggedInSubject.next(true);
   }
-
-  updateUserProfile(any: any): Observable<any> {
-    return this._http.put<any>(`https://67cea6ee125cd5af757b6514.mockapi.io/Users/${any.id}`, any);
-  }
-
 
   logout() {
     localStorage.removeItem('User');
